@@ -9,19 +9,19 @@
     <h1>Create Post</h1>
     <form action="{{ route('posts.store') }}" method="POST">
         @csrf
-        <label>Title</label>
+        <label>Judul</label>
         <input type="text" name="title" value="{{ old('title') }}">
         @error('title')
             <p>{{ $message }}</p>
         @enderror
 
-        <label>Content</label>
+        <label>Isi</label>
         <textarea name="content">{{ old('content') }}</textarea>
         @error('content')
             <p>{{ $message }}</p>
         @enderror
 
-        <button type="submit">Create</button>
+        <button type="submit">Buat</button>
     </form>
 </body>
 </html>

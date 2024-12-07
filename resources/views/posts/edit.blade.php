@@ -10,13 +10,13 @@
     <form action="{{ route('posts.update', $post->id) }}" method="POST">
         @csrf
         @method('PUT')
-        <label>Title</label>
+        <label>Judul</label>
         <input type="text" name="title" value="{{ $post->title }}">
         @error('title')
             <p>{{ $message }}</p>
         @enderror
 
-        <label>Content</label>
+        <label>Isi</label>
         <textarea name="content">{{ $post->content }}</textarea>
         @error('content')
             <p>{{ $message }}</p>

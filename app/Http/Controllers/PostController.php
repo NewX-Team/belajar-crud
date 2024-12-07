@@ -27,7 +27,7 @@ class PostController extends Controller
 
         Post::create($request->all());
 
-        return redirect()->route('posts.index')->with('success', 'Post created successfully!');
+        return redirect()->route('posts.index')->with('success', 'Post Berhasil Dibuat!');
     }
 
     public function edit(Post $post)
@@ -44,12 +44,12 @@ class PostController extends Controller
 
         $post->update($request->all());
 
-        return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+        return redirect()->route('posts.index')->with('success', 'Post berhasil di update!');
     }
 
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->route('posts.index')->with('success', 'Post deleted successfully!');
+        return redirect()->route('posts.index')->with('success', 'Post berhasil di hapus!');
     }
 }

@@ -7,16 +7,16 @@
 </head>
 <body>
     <h1>Posts</h1>
-    <a href="{{ route('posts.create') }}">Create New Post</a>
+    <a href="{{ route('posts.create') }}">Buat data baru</a>
     @if (session('success'))
         <p>{{ session('success') }}</p>
     @endif
     <table border="1">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Actions</th>
+                <th>Judul</th>
+                <th>Isi</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +29,7 @@
                         <form action="{{ route('posts.destroy', $post->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Delete</button>
+                            <button type="submit">Hapus</button>
                         </form>
                     </td>
                 </tr>
